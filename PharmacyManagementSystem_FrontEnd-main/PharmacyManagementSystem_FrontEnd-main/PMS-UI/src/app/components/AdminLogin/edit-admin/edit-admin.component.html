@@ -1,0 +1,119 @@
+<div class="container">
+    <form [formGroup]="updateForm" (submit)="onUpdateClick()" >
+    <div class="row gutters">
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="account-settings">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="../../../../assets/images/userIcon.png" alt="User">
+                    </div>
+                    <h5 class="user-name">{{admin?.name}}</h5>
+                    <p class="user-email">{{admin?.email}}</p>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h6 class="mb-2 text-primary">Personal Details</h6>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" value="{{admin?.name}}" [readonly]="true"  class="form-control" id="fullName" placeholder="Enter full name">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="eMail">Email</label>
+                        <input type="email" value="{{admin?.email}}" formControlName="email" class="form-control" name="email" id="eMail" placeholder="Enter email ID">
+                        <div *ngIf="updateFormControl.email.errors && updateFormControl.email.touched">
+                            <span class="error-cls">Email is Required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" value="{{admin?.mobile}}" formControlName="mobile" class="form-control" id="phone" placeholder="Enter phone number">
+                        <div *ngIf="updateFormControl.mobile.errors && updateFormControl.mobile.touched">
+                            <div *ngIf="updateFormControl.mobile.errors.required" >
+                            <span class="error-cls">Mobile is Required</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="website">Gender</label>
+                        <input type="gender" value="{{admin?.gender}}" [readonly]="true" class="form-control" id="gender" placeholder="gender">
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h6 class="mt-3 mb-2 text-primary">Address</h6>
+                    
+                </div>
+                
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="ciTy">City</label>
+                        <input type="name" value="{{admin?.city}}" formControlName="city" class="form-control" id="ciTy" placeholder="Enter City">
+                        <div *ngIf="updateFormControl.city.errors && updateFormControl.city.touched">
+                            <span class="error-cls">City is Required</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="District">District</label>
+                        <input type="name" value="{{admin?.district}}" formControlName="district" class="form-control" id="District" placeholder="Enter District">
+                        <div *ngIf="updateFormControl.district.errors && updateFormControl.district.touched">
+                            <span class="error-cls">District is Required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="sTate">State</label>
+                        <input type="text" value="{{admin?.state}}" formControlName="state" class="form-control" id="sTate" placeholder="Enter State">
+                        <div *ngIf="updateFormControl.state.errors && updateFormControl.state.touched">
+                            <span class="error-cls">State is Required</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <br/>
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="text-right">
+                        <button type="button" id="submit" name="submit" class="btn btn-secondary" routerLink="../view-admin">Cancel</button>
+                        &nbsp;
+                        <button type="submit"  id="submit" name="submit" class="btn btn-primary" (click)="onUpdateClick()">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </form>
+
+    <br><br><br>
+</div>

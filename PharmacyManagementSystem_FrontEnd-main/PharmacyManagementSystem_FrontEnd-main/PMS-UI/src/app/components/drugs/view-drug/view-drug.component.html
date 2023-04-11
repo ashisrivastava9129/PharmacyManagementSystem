@@ -1,0 +1,39 @@
+<div class="card w-80">
+    <div class="card-body">
+      <h3 class="card-title">{{drug?.name}}</h3> <br>
+      
+      <table>
+        <tr>
+          <th>Company:</th>
+          <td>{{drug?.company}}</td>
+        </tr>
+        <tr>
+          <th>Description:</th>
+          <td>{{drug?.description}}</td>
+        </tr>
+        <tr>
+          <th>Price:</th>
+          <td>Rs.{{drug?.cost}}</td>
+        </tr>
+        <tr>
+          <th>Stock:</th>
+          <td>{{drug?.quantity}}</td>
+        </tr>
+        <tr>
+          <th>MFG Date:</th>
+          <td> {{drug?.mfgDate}}</td>
+        </tr>
+        <tr>
+          <th>Expire Date:</th>
+          <td>{{drug?.expireDate}}</td>
+        </tr>
+          
+      </table>
+
+      <br>
+      <a href="Javascript.void(0)" routerLink="/drugHome" class="btn btn-secondary">Back</a> &nbsp;&nbsp;
+      <a href="Javascript.void(0)" routerLink="drug-edit" class="btn btn-success">Edit</a> &nbsp;&nbsp;
+      <a href="#" class="btn btn-primary">ADD TO CART</a>
+    </div>
+  </div>
+  

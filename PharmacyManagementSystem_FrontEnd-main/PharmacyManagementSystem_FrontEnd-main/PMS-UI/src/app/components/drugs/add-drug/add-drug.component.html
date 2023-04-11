@@ -1,0 +1,40 @@
+<form style="padding: 15px 60px 15px 60px;" [formGroup]="drugAddForm" (submit)="onDrugAddFormSubmit()">
+    
+    <div class="form-group">
+        <label for="name">Drug Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name" aria-describedby="emailHelp" placeholder="Enter name">
+      </div>
+    
+    <div class="form-group">
+      <label for="company">Drug Company Name</label>
+      <input type="text" class="form-control" id="company" formControlName="company" aria-describedby="emailHelp" placeholder="Enter company">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" formControlName="description" aria-describedby="emailHelp" placeholder="Enter description">
+    </div>
+
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" formControlName="price" aria-describedby="emailHelp" placeholder="Enter price">
+    </div>
+
+    <div class="form-group">
+        <label for="stock">Stock</label>
+        <input type="number" class="form-control" id="stock" formControlName="stock" aria-describedby="emailHelp" placeholder="Enter stock">
+    </div>
+
+    <div class="form-group">
+        <label for="mfgDate">Manufacturing Date</label>
+        <input type="date" class="form-control" id="mfgDate" formControlName="mfgDate" aria-describedby="emailHelp" placeholder="Enter mfgDate">
+    </div>
+
+    <div class="form-group">
+        <label for="expireDate">Expire Date</label>
+        <input type="date" class="form-control" id="expireDate" formControlName="expireDate" aria-describedby="emailHelp" placeholder="Enter expireDate">
+    </div>
+    
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button> <br/><br/>
+  </form>

@@ -1,0 +1,24 @@
+<form style="padding: 15px 60px 15px 60px;" [formGroup]="suppliersAddForm" (submit)="onSuppliersAddFormSubmit()">
+    
+    <div class="form-group">
+        <label for="suppliersName">Suppliers Name</label>
+        <input type="text" class="form-control" id="suppliersName" formControlName="suppliersName" aria-describedby="emailHelp" placeholder="Enter suppliersName">
+      </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" formControlName="description" aria-describedby="emailHelp" placeholder="Enter description">
+    </div>
+
+    <div class="form-group">
+        <label for="suppliersEmail">SuppliersEmail </label>
+        <input type="text" class="form-control" id="suppliersEmail" formControlName="suppliersEmail" aria-describedby="emailHelp" placeholder="Enter suppliersEmail">
+      </div>
+
+    
+    
+    <br>
+    <a href="Javascript.void(0)" routerLink="/suppliersHome" class="btn btn-secondary">Back</a> &nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary">Submit</button> <br/><br/>
+</form>
+

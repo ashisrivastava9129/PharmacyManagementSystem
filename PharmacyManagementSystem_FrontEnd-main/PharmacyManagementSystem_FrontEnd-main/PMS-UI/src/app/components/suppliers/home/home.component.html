@@ -1,0 +1,37 @@
+<div class="alert alert-primary" role="alert" *ngIf="errorMsg">
+    {{errorMsg}}
+  </div>
+  
+  
+  <div class="row " style="margin: 20px;">
+    
+    <p align="left" *ngIf="!errorMsg">
+      <a href="Javascript.void(0)" routerLink="/suppliers-add" class="btn btn-success">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        </svg>Add Suppliers
+      </a>
+    </p>
+  
+        <div class="card text-center suppliers" style="width: 18rem; margin: 15px;" *ngFor="let s of suppliers">
+          
+            <div class="card-body">
+              
+              <p align="right">
+                <a href="#" class="delete" (click)="deleteSuppliersMethod(s.id)" data-toggle="tooltip" data-placement="top" title="Delete">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                  </svg>
+                </a>
+              </p>
+  
+              <a href="Javascript.void(0)" routerLink="{{s.id}}"  style="text-decoration: none;"><h5 class="card-title">{{s.suppliersName}}</h5></a>
+              <span style="font-size: small;" class="card-text">Email: {{s.suppliersEmail}}</span> <br/>
+               
+              
+            </div>
+        
+        </div>
+      
+  </div>
+  

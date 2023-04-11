@@ -1,0 +1,14 @@
+span{
+    padding: 10px;
+}
+h3{
+    color: tomato;
+}
+table,td{
+    padding: 7px;
+}
+.card-body{
+    background-image: url("../../../../assets/images/desc-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

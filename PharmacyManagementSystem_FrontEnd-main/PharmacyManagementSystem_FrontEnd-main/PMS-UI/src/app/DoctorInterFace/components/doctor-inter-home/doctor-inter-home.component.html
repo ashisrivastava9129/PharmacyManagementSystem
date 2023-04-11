@@ -1,0 +1,23 @@
+<div class="alert alert-primary" role="alert" *ngIf="errorMsg">
+    {{errorMsg}}
+  </div>
+  
+  
+  <div class="row " style="margin: 20px;">
+    
+    
+        <div class="card text-center drugs" style="width: 18rem; margin: 15px;" *ngFor="let d of drugs">
+          
+            <div class="card-body">
+              
+              <a href="Javascript.void(0)" routerLink="{{d.id}}"  style="text-decoration: none;"><h5 class="card-title">{{d.name}}</h5></a>
+              <span class="card-text">Price: {{d.cost}}</span> <br/>
+              <span class="card-text">Stock: {{d.quantity}}</span> <br/>
+              <span class="card-text">Expire date: {{d.expireDate}}</span><br/><br/>
+              <a href="#" class="btn btn-primary">ADD TO CART</a>
+              
+            </div>
+        
+        </div>
+      
+  </div>

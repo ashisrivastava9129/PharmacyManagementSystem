@@ -1,0 +1,58 @@
+<form style="padding: 15px 60px 15px 60px;" [formGroup]="drugAddForm" (submit)="onDrugUpdateFormSubmit()">
+    
+    <div class="form-group">
+        <label for="name">Drug Name</label>
+        <input type="text" class="form-control" value="{{drug?.name}}" id="name" formControlName="name" aria-describedby="emailHelp" placeholder="Enter name">
+        <div *ngIf="updateFormControl.name.errors && updateFormControl.name.touched">
+            <span class="error-cls">Name is Required</span>
+        </div>
+      </div>
+    
+    <div class="form-group">
+      <label for="company">Drug Company Name</label>
+      <input type="text" class="form-control" id="company" value="{{drug?.company}}" formControlName="company" aria-describedby="emailHelp" placeholder="Enter company">
+        <div *ngIf="updateFormControl.company.errors && updateFormControl.company.touched">
+            <span class="error-cls">Company Name is Required</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" value="{{drug?.description}}" formControlName="description" aria-describedby="emailHelp" placeholder="Enter description">
+        <div *ngIf="updateFormControl.description.errors && updateFormControl.description.touched">
+            <span class="error-cls">description is Required</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" value="{{drug?.cost}}" formControlName="price" aria-describedby="emailHelp" placeholder="Enter price">
+        <div *ngIf="updateFormControl.price.errors && updateFormControl.price.touched">
+            <span class="error-cls">price is Required</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="stock">Stock</label>
+        <input type="number" class="form-control" id="stock" value="{{drug?.quantity}}" formControlName="stock" aria-describedby="emailHelp" placeholder="Enter stock">
+        <div *ngIf="updateFormControl.stock.errors && updateFormControl.stock.touched">
+            <span class="error-cls">stock is Required</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="mfgDate">Manufacturing Date</label>
+        <input type="date" class="form-control" id="mfgDate" [readonly]="true" value="{{drug?.mfgDate}}" formControlName="mfgDate" aria-describedby="emailHelp" placeholder="Enter mfgDate">
+        
+    </div>
+
+    <div class="form-group">
+        <label for="expireDate">Expire Date</label>
+        <input type="date" class="form-control" id="expireDate" [readonly]="true" value="{{drug?.expireDate}}" formControlName="expireDate" aria-describedby="emailHelp" placeholder="Enter expireDate">
+        
+    </div>
+    
+    <br>
+    <a href="Javascript.void(0)" routerLink="../" class="btn btn-secondary">Back</a> &nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary">Update</button> <br/><br/>
+  </form>

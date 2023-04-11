@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-light" style="background-color: #c6e2ff">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Javascript.void(0)" routerLink="/">
+        <img src="assets/images/Pharmacare logo.png" alt="..." height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" *ngIf="adminLoggedIn">
+            <a class="nav-link active" aria-current="page" href="Javascript.void(0)" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item" *ngIf="doctorLoggedIn">
+            <a class="nav-link active" aria-current="page" href="Javascript.void(0)" routerLink="/">Home</a>
+          </li>
+  
+          
+          <li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" >
+              <li><a class="dropdown-item"  href="Javascript.void(0)" *ngIf="adminLoggedIn" routerLink="suppliersHome">Suppliers</a></li>
+              <li><a class="dropdown-item"  href="Javascript.void(0)" *ngIf="adminLoggedIn" routerLink="drugHome">Manage Drugs</a></li>
+              <li><a class="dropdown-item" href="#">Service3</a></li>
+            </ul>
+
+          </li>
+
+          <!-- Display Doctor orders -->
+          <li class="nav-item" *ngIf="doctorLoggedIn">
+            <a class="nav-link active" aria-current="page" href="Javascript.void(0)" routerLink="doctorOrders">Orders</a>
+          </li>
+
+        </ul>
+
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <span  *ngIf="loggedIn" style="color: black;">
+          Welcome {{username}}
+          &nbsp;&nbsp;
+          <a class="btn btn-danger btn-sm" href="Javascript.void(0)" (click)="onLogOut()" routerLink="/">log out</a>
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <form class="d-flex">
+          <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        
+          <!-- <form class="d-flex">
+            <button class="btn btn-outline-success" type="submit">Cart(0)</button>
+          </form> -->
+
+          <a href="Javascript.void(0)" *ngIf="doctorLoggedIn" routerLink="addToCart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+          </a>
+
+         
+          
+          &nbsp;&nbsp;&nbsp;
+          <form class="d-flex" *ngIf="!loggedIn">
+              <a href="Javascript.void(0)" routerLink="/login" class="btn btn-success btn-sm" type="submit">login</a>
+            </form>
+
+          <!--Only for Admin-->
+          <form class="d-flex" *ngIf="loggedIn">
+            <a href="Javascript.void(0)"  routerLink="view-user" class="remove-color" data-toggle="tooltip" data-placement="top" title="Profle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>
+            </a>
+          </form>
+
+          <!-- <form class="d-flex" *ngIf="doctorloggedIn">
+            <a href="Javascript.void(0)" *ngIf="doctorloggedIn" routerLink="view-doctor" class="remove-color" data-toggle="tooltip" data-placement="top" title="Profle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>
+            </a>
+          </form> -->
+
+      
+      </div>
+    </div>
+</nav>
+
+  

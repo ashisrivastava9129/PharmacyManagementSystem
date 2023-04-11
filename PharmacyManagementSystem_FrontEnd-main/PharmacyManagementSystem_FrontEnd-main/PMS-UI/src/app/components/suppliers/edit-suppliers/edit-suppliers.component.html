@@ -1,0 +1,30 @@
+<form style="padding: 15px 60px 15px 60px;" [formGroup]="suppliersAddForm" (submit)="onSuppliersUpdateFormSubmit()">
+    
+    <div class="form-group">
+        <label for="suppliersName">Suppliers Name</label>
+        <input type="text" class="form-control" value="{{suppliers?.suppliersName}}" id="suppliersName" formControlName="suppliersName" aria-describedby="emailHelp" placeholder="Enter suppliersName">
+        <div *ngIf="updateFormControl.suppliersName.errors && updateFormControl.suppliersName.touched">
+            <span class="error-cls">suppliersName is Required</span>
+        </div>
+      </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" value="{{suppliers?.description}}" formControlName="description" aria-describedby="emailHelp" placeholder="Enter description">
+        <div *ngIf="updateFormControl.description.errors && updateFormControl.description.touched">
+            <span class="error-cls">description is Required</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="suppliersEmail">Suppliers Email</label>
+        <input type="text" class="form-control" id="suppliersEmail" value="{{suppliers?.suppliersEmail}}" formControlName="suppliersEmail" aria-describedby="emailHelp" placeholder="Enter suppliersEmail">
+          <div *ngIf="updateFormControl.suppliersEmail.errors && updateFormControl.suppliersEmail.touched">
+              <span class="error-cls">suppliersEmail is Required</span>
+          </div>
+      </div>
+    
+    <br>
+    <a href="Javascript.void(0)" routerLink="../" class="btn btn-secondary">Back</a> &nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary">Update</button> <br/><br/>
+  </form>

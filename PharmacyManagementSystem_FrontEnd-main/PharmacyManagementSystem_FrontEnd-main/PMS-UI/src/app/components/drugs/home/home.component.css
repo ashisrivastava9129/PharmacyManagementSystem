@@ -1,0 +1,11 @@
+ .delete :hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .drugs{
+    background-image: url("../../../../assets/images/Drug-bg.jpeg");
+    
+  }
+  
